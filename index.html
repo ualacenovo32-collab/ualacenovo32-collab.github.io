@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cardápio de Pizzas</title>
+
+  <meta name="description" content="Cardápio digital de pizzas 30 cm com borda de cheddar. Cada pizza acompanha Guaraná Antarctica de 1 litro.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #fff;
+      padding-bottom: 30px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #b30000, #e00000, #8b0000);
+      text-align: center;
+      padding: 30px 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      font-size: 34px;
+      margin-bottom: 8px;
+      font-weight: 900;
+    }
+
+    header p {
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .promocao {
+      background: #ffd400;
+      color: #111;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 15px;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .titulo h2 {
+      font-size: 28px;
+      color: #ffd400;
+      margin-bottom: 8px;
+    }
+
+    .titulo p {
+      color: #ddd;
+      font-size: 15px;
+    }
+
+    .cardapio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .pizza {
+      background: #1d1d1d;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #333;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pizza:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    }
+
+    .pizza img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .conteudo {
+      padding: 18px;
+    }
+
+    .conteudo h3 {
+      font-size: 23px;
+      color: #ffd400;
+      margin-bottom: 8px;
+    }
+
+    .descricao {
+      color: #ddd;
+      line-height: 1.5;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .tamanho {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .acompanhamento {
+      color: #7cff7c;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .preco {
+      font-size: 28px;
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .botao {
+      display: block;
+      text-align: center;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      padding: 13px;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .botao:hover {
+      background: #1ebe5d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #aaa;
+      border-top: 1px solid #333;
+      margin-top: 30px;
+    }
+
+    footer strong {
+      color: #ffd400;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .cardapio {
+        grid-template-columns: 1fr;
+      }
+
+      .pizza img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🍕 CARDÁPIO DE PIZZAS 🍕</h1>
+    <p>Pizzas deliciosas para você e sua família!</p>
+  </header>
+
+  <div class="promocao">
+    🎁 CADA PIZZA ACOMPANHA 1 GUARANÁ ANTARCTICA DE 1 LITRO! 🎁
+  </div>
+
+  <main class="container">
+
+    <div class="titulo">
+      <h2>🍕 NOSSOS SABORES</h2>
+      <p>Pizza de 30 cm com borda de cheddar</p>
+    </div>
+
+    <section class="cardapio">
+
+      <!-- 1 - CALABRESA -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Pizza de Calabresa">
+        <div class="conteudo">
+          <h3>Calabresa</h3>
+          <p class="descricao">
+            Pizza de calabresa preparada com muito sabor.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Calabresa." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 2 - MARGUERITA -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80" alt="Pizza Marguerita">
+        <div class="conteudo">
+          <h3>Marguerita</h3>
+          <p class="descricao">
+            Uma combinação clássica e deliciosa.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 29,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20Marguerita." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 3 - PORTUGUESA -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80" alt="Pizza Portuguesa">
+        <div class="conteudo">
+          <h3>Portuguesa</h3>
+          <p class="descricao">
+            Sabor tradicional para quem gosta de uma pizza bem recheada.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 29,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20Portuguesa." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 4 - TRÊS QUEIJOS -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Pizza Três Queijos">
+        <div class="conteudo">
+          <h3>Três Queijos</h3>
+          <p class="descricao">
+            Uma deliciosa combinação de queijos para os apaixonados por pizza.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20Três%20Queijos." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 5 - MUSSARELA -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Pizza de Mussarela">
+        <div class="conteudo">
+          <h3>Mussarela</h3>
+          <p class="descricao">
+            Queijo mussarela derretido e muito saboroso.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Mussarela." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 6 - SALAMINHO -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Pizza de Salaminho">
+        <div class="conteudo">
+          <h3>Salaminho</h3>
+          <p class="descricao">
+            Pizza saborosa com salaminho e muito recheio.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 29,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Salaminho." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 7 - FRANGO COM CATUPIRY -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Pizza de Frango com Catupiry">
+        <div class="conteudo">
+          <h3>Frango com Catupiry</h3>
+          <p class="descricao">
+            Frango desfiado combinado com o cremoso Catupiry.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Frango%20com%20Catupiry." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 8 - FRANGO COM CHEDDAR -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Pizza de Frango com Cheddar">
+        <div class="conteudo">
+          <h3>Frango com Cheddar</h3>
+          <p class="descricao">
+            Frango desfiado com cheddar cremoso.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Frango%20com%20Cheddar." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 9 - BACON -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Pizza de Bacon">
+        <div class="conteudo">
+          <h3>Bacon</h3>
+          <p class="descricao">
+            Bacon crocante e muito sabor para deixar sua pizza irresistível.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Bacon." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+      <!-- 10 - PRESUNTO -->
+      <article class="pizza">
+        <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Pizza de Presunto">
+        <div class="conteudo">
+          <h3>Presunto</h3>
+          <p class="descricao">
+            Uma pizza clássica e deliciosa para qualquer momento.
+          </p>
+          <p class="tamanho">🍕 30 cm • Borda de cheddar</p>
+          <p class="acompanhamento">🥤 Acompanha Guaraná Antarctica 1L</p>
+          <div class="preco">R$ 24,99</div>
+          <a class="botao" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20pizza%20de%20Presunto." target="_blank">
+            📲 PEDIR AGORA
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>🍕 <strong>Faça seu pedido!</strong></p>
+    <p>Obrigado pela preferência ❤️</p>
+  </footer>
+
+</body>
+</html>
