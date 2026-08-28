@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cardápio de Pizzas</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #b30000;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .aviso {
+      background: #fff3cd;
+      color: #5c4400;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 15px 40px;
+    }
+
+    .titulo {
+      text-align: center;
+      margin: 10px 0 25px;
+    }
+
+    .titulo h2 {
+      font-size: 27px;
+      color: #b30000;
+    }
+
+    .titulo p {
+      margin-top: 7px;
+      color: #666;
+    }
+
+    .cardapio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .pizza {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.2s;
+    }
+
+    .pizza:hover {
+      transform: translateY(-4px);
+    }
+
+    .pizza img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      padding: 17px;
+      text-align: center;
+    }
+
+    .info h3 {
+      font-size: 22px;
+      color: #b30000;
+      margin-bottom: 8px;
+    }
+
+    .descricao {
+      color: #555;
+      font-size: 14px;
+      min-height: 40px;
+      line-height: 1.4;
+    }
+
+    .preco {
+      font-size: 25px;
+      font-weight: bold;
+      color: #168000;
+      margin-top: 12px;
+    }
+
+    .acompanha {
+      background: #fff0f0;
+      color: #8b0000;
+      border-radius: 8px;
+      padding: 9px;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .pedido {
+      display: block;
+      margin-top: 14px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .pedido:hover {
+      background: #1ebe5d;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 27px;
+      }
+
+      .pizza img {
+        height: 200px;
+      }
+
+      .cardapio {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍕 CARDÁPIO DE PIZZAS 🍕</h1>
+  <p>Escolha sua pizza favorita!</p>
+</header>
+
+<div class="aviso">
+  🍕 Pizzas de 30 cm<br>
+  🧀 Borda recheada de cheddar<br>
+  🥤 Acompanha 1 Guaraná Antarctica de 1 litro
+</div>
+
+<main class="container">
+
+  <div class="titulo">
+    <h2>🍕 Nossos Sabores</h2>
+    <p>Confira nossos sabores e valores</p>
+  </div>
+
+  <section class="cardapio">
+
+    <!-- CALABRESA -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,calabresa?lock=1" alt="Pizza de Calabresa">
+      <div class="info">
+        <h3>Calabresa</h3>
+        <p class="descricao">Pizza de calabresa preparada com muito sabor.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Calabresa." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- TRÊS QUEIJOS -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,cheese?lock=2" alt="Pizza Três Queijos">
+      <div class="info">
+        <h3>Três Queijos</h3>
+        <p class="descricao">Uma combinação deliciosa de queijos.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20Três%20Queijos." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FRANGO COM CHEDDAR -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,chicken?lock=3" alt="Pizza Frango com Cheddar">
+      <div class="info">
+        <h3>Frango com Cheddar</h3>
+        <p class="descricao">Frango temperado combinado com cremoso cheddar.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Frango%20com%20Cheddar." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FRANGO COM CATUPIRY -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,chicken,cheese?lock=4" alt="Pizza Frango com Catupiry">
+      <div class="info">
+        <h3>Frango com Catupiry</h3>
+        <p class="descricao">Frango desfiado com delicioso creme de Catupiry.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Frango%20com%20Catupiry." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- MUSSARELA -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,mozzarella?lock=5" alt="Pizza de Mussarela">
+      <div class="info">
+        <h3>Mussarela</h3>
+        <p class="descricao">Muita mussarela derretida e saborosa.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Mussarela." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- BACON -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,bacon?lock=6" alt="Pizza de Bacon">
+      <div class="info">
+        <h3>Bacon</h3>
+        <p class="descricao">Pizza com delicioso bacon crocante.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Bacon." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- ROMEU E JULIETA -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,dessert?lock=7" alt="Pizza Romeu e Julieta">
+      <div class="info">
+        <h3>Romeu e Julieta</h3>
+        <p class="descricao">A combinação clássica de queijo e goiabada.</p>
+        <div class="preco">R$ 24,99</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20Romeu%20e%20Julieta." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- MARGUERITA -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,margherita?lock=8" alt="Pizza Marguerita">
+      <div class="info">
+        <h3>Marguerita</h3>
+        <p class="descricao">Uma pizza clássica e cheia de sabor.</p>
+        <div class="preco">R$ 30,00</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20Marguerita." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- SALAME -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,salami?lock=9" alt="Pizza de Salame">
+      <div class="info">
+        <h3>Salame</h3>
+        <p class="descricao">Salame combinado com queijo e molho especial.</p>
+        <div class="preco">R$ 30,00</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Salame." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- PORTUGUESA -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,portuguese?lock=10" alt="Pizza Portuguesa">
+      <div class="info">
+        <h3>Portuguesa</h3>
+        <p class="descricao">Um dos sabores mais tradicionais das pizzarias.</p>
+        <div class="preco">R$ 30,00</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20Portuguesa." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- BRIGADEIRO -->
+    <div class="pizza">
+      <img src="https://loremflickr.com/700/500/pizza,chocolate?lock=11" alt="Pizza de Brigadeiro">
+      <div class="info">
+        <h3>Brigadeiro</h3>
+        <p class="descricao">Pizza doce com delicioso sabor de brigadeiro.</p>
+        <div class="preco">R$ 24,00</div>
+        <div class="acompanha">
+          🥤 Acompanha Guaraná Antarctica 1L
+        </div>
+        <a class="pedido" href="https://wa.me/?text=Olá!%20Quero%20pedir%20uma%20Pizza%20de%20Brigadeiro." target="_blank">
+          📲 Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <strong>🍕 Cardápio de Pizzas</strong><br>
+  Pizzas de 30 cm • Borda recheada de cheddar<br>
+  Todas as pizzas acompanham Guaraná Antarctica 1 litro.
+</footer>
+
+</body>
+</html>
